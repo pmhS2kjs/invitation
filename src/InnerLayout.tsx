@@ -17,4 +17,7 @@ const Section = styled.section`
   align-items: center;
   flex-direction: column;
   text-align: center;
+  h2 {
+    margin-bottom: 16px;
+  }
 `;

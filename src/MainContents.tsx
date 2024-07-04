@@ -23,6 +23,7 @@ export default MainContents;
 
 const StyledText = styled.p`
   line-height: 2.5;
+  margin-bottom: 32px;
 `;
 
 const StyledIntroText = styled.div`
@@ -35,4 +36,5 @@ const StyledIntroText = styled.div`
   align-items: center;
   width: 250px;
   margin: 0 auto;
+  gap: 16px;
 `;

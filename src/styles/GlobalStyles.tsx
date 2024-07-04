@@ -134,7 +134,7 @@ function GlobalStyle() {
             }
           }
           // swiper style
-          /* .swiper {
+          .swiper {
             width: 100%;
             height: 100%;
           }
@@ -153,7 +153,7 @@ function GlobalStyle() {
             height: 400px;
             width: auto;
           }
-
+          /*
           // swiper bullet style
           .swiper-pagination {
             position: static;
