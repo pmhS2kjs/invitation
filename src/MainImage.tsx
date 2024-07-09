@@ -9,6 +9,21 @@ import Sample3 from './assets/sample3.json';
 const MainImage = () => {
   return (
     <StyledMainImg>
+      <svg
+        width="100%"
+        height="auto"
+        viewBox="0 0 500 700"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMidYMin slice"
+      >
+        <rect width="100%" height="700" fill="none" />
+        <path
+          d="M 250,0 A 250,250 0 0,1 500,250 L 500,700 L 0,700 L 0,250 A 250,250 0 0,1 250,0 Z"
+          fill="none"
+          stroke="#00bcd4"
+          strokeWidth="200"
+        />
+      </svg>
       <LottieContainer>
         <Lottie animationData={Sample3} loop />
       </LottieContainer>
