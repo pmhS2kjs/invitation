@@ -5,6 +5,7 @@ import MainGallery from '@src/MainGallery';
 import MainCalendar from '@src/MainCalendar';
 import MainMap from '@src/MainMap';
 import MainHost from '@src/MainHost';
+import Footer from '@src/Footer';
 function App() {
   return (
     <StyledMainWrap>
@@ -14,6 +15,7 @@ function App() {
       <MainCalendar />
       <MainMap />
       <MainHost />
+      <Footer />
     </StyledMainWrap>
   );
 }
