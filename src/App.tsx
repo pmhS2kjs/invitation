@@ -2,12 +2,18 @@ import styled from '@emotion/styled';
 import EnterImage from './MainImage';
 import MainContents from '@src/MainContents';
 import MainGallery from '@src/MainGallery';
+import MainCalendar from '@src/MainCalendar';
+import MainMap from '@src/MainMap';
+import MainHost from '@src/MainHost';
 function App() {
   return (
     <StyledMainWrap>
       <EnterImage />
       <MainContents />
       <MainGallery />
+      <MainCalendar />
+      <MainMap />
+      <MainHost />
     </StyledMainWrap>
   );
 }
