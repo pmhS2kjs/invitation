@@ -125,7 +125,7 @@ function GlobalStyle() {
           font-family: 'Pretendard', Arial, Helvetica, sans-serif,
             'Apple SD Gothic Neo', -apple-system, 'Segoe UI', 'Oxygen';
           min-width: 320px;
-          background-color: ${theme.color.gray50};
+          background-color: ${theme.color.gray0};
           @media screen and (min-width: 500px) {
             max-width: 500px;
             margin: 0 auto;
