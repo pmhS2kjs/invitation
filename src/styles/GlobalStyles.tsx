@@ -153,6 +153,9 @@ function GlobalStyle() {
             height: 400px;
             width: auto;
           }
+          .swiper-pagination-bullet-active {
+            background: #cd4d6d;
+          }
           /*
           // swiper bullet style
           .swiper-pagination {
