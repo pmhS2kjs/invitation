@@ -1,19 +1,38 @@
+// import { css } from '@emotion/react';
 import styled from '@emotion/styled';
+import InnerLayout from '@src/InnerLayout';
+import { useEffect, useState } from 'react';
 
 const MainCalendar = () => {
+  const [dDay, setDDay] = useState<number | null>(null);
+
+  const calculateDDay = () => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const target = new Date('2024-10-26');
+    target.setHours(0, 0, 0, 0);
+    const differenceInTime = target.getTime() - today.getTime();
+    const differenceInDays = Math.ceil(differenceInTime / (1000 * 3600 * 24));
+    setDDay(differenceInDays);
+  };
+
+  useEffect(() => {
+    calculateDDay();
+  }, []);
+
   return (
-    <>
-      <StyeldCalendar>
-        <p className="current-date">September 2022</p>
+    <InnerLayout>
+      <StyledCalendar>
+        <p className="current-date">2024년 10월</p>
         <div className="calendar">
           <ul className="weeks">
-            <li>Sun</li>
-            <li>Mon</li>
-            <li>Tue</li>
-            <li>Wed</li>
-            <li>Thu</li>
-            <li>Fri</li>
-            <li>Sat</li>
+            <li>일</li>
+            <li>월</li>
+            <li>화</li>
+            <li>수</li>
+            <li>목</li>
+            <li>금</li>
+            <li>토</li>
           </ul>
           <ul className="days">
             <li className="inactive">29</li>
@@ -43,7 +62,7 @@ const MainCalendar = () => {
             <li>23</li>
             <li>24</li>
             <li>25</li>
-            <li>26</li>
+            <li className="active">26</li>
             <li>27</li>
             <li>28</li>
             <li>29</li>
@@ -53,24 +72,29 @@ const MainCalendar = () => {
             <li className="inactive">2</li>
           </ul>
         </div>
-      </StyeldCalendar>
-      <StyledPlace>
-        <p>장소</p>
-        <p>시간</p>
-      </StyledPlace>
-      <StyledAddress>주소</StyledAddress>
-    </>
+      </StyledCalendar>
+      <StyledCounting>
+        준성 ❤ 민혜의 결혼식이 {dDay}일 남았습니다.
+      </StyledCounting>
+      {/* <StyledPlace>
+        <p>2024년 10월 26일 토요일 낮 12시 30분</p>
+        <p>힐스카이 웨딩&컨벤션 9층 힐시크릿홀</p>
+      </StyledPlace> */}
+    </InnerLayout>
   );
 };
 
 export default MainCalendar;
 
-const StyeldCalendar = styled.div`
+const StyledCalendar = styled.div`
   align-items: center;
   justify-content: center;
+  margin-bottom: 36px;
   .current-date {
+    text-align: center;
     font-size: 24px;
     font-weight: 600;
+    margin-bottom: 32px;
   }
   .calendar ul {
     display: flex;
@@ -85,19 +109,15 @@ const StyeldCalendar = styled.div`
     margin-bottom: 20px;
   }
   .calendar ul li {
-    /*#8*/
     width: calc(100% / 7);
-    /*#9*/
     position: relative;
   }
   .calendar .days li {
-    /*#10*/
     z-index: 1;
     margin-top: 30px;
     cursor: pointer;
   }
 
-  /*#11*/
   .days li.inactive {
     color: #aaa;
   }
@@ -119,7 +139,7 @@ const StyeldCalendar = styled.div`
     background: #f2f2f2;
   }
   .days li.active::before {
-    background: #008aff;
+    background: #fa4f4f;
   }
 `;
 
@@ -127,11 +147,26 @@ const StyledPlace = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  padding: 24px;
+  gap: 16px;
+  margin-bottom: 16px;
   border: 1px solid ${({ theme }) => theme.color.gray200};
 `;
 
-const StyledAddress = styled.div`
+// const StyledAddress = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   ${({ theme }) => css`
+//     color: ${theme.color.gray800};
+//     ${theme.typography.content1Bold}
+//   `}
+// `;
+
+const StyledCounting = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 16px;
 `;
