@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import mainImg from './assets/img1.jpg';
+import mainImg from './assets/imgs/img1.jpg';
 import { css } from '@emotion/react';
 import Lottie from 'lottie-react';
 // import Sample from './assets/sample.json';
@@ -39,10 +39,11 @@ const MainImage = () => {
           <Lottie animationData={Sample2} loop />
         </LottieContainer>
         <img src={mainImg} alt="main" />
+        <p>김준성 ❤ 박민혜</p>
       </StyledMainImg>
       <StyledTitle>
-        <p>날짜</p>
-        <p>장소</p>
+        <p>2024년 10월 26일, 토요일 낮 12시 30분</p>
+        <p>힐스카이 웨딩&컨벤션 9층 힐시크릿홀</p>
       </StyledTitle>
     </>
   );
@@ -63,7 +64,12 @@ const StyledMainImg = styled.div`
     top: 0;
     width: 100%;
     height: 100%;
-    /* top: -116px; */
+  }
+  p {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 `;
 
