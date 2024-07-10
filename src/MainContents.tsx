@@ -1,10 +1,10 @@
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import InnerLayout from '@src/InnerLayout';
 
 const MainContents = () => {
   return (
     <InnerLayout>
-      <h2>모시는 글</h2>
       <StyledText>
         서로 다른 길을 걷던 두 사람이 <br />
         이제 함께 한곳을 바라보며 걸어가려 합니다. <br />
@@ -12,8 +12,12 @@ const MainContents = () => {
         함께 하시어 축복과 격려해 주시길 소망합니다.
       </StyledText>
       <StyledIntroText>
-        <p>OOO&OOO 의 장남 준성</p>
-        <p>OOO&OOO 의 차녀 민혜</p>
+        <p>
+          김정재&이지선 <span>의 장남</span> 준성
+        </p>
+        <p>
+          박인기&이영선 <span>의 차녀</span> 민혜
+        </p>
       </StyledIntroText>
     </InnerLayout>
   );
@@ -37,4 +41,16 @@ const StyledIntroText = styled.div`
   width: 250px;
   margin: 0 auto;
   gap: 16px;
+  p {
+    ${({ theme }) => css`
+      color: ${theme.color.gray800};
+      ${theme.typography.content1Bold}
+    `}
+    letter-spacing: 2.5px;
+    span {
+      ${({ theme }) => css`
+        ${theme.typography.content3}
+      `}
+    }
+  }
 `;
