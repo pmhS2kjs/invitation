@@ -42,7 +42,7 @@ const ModalContent = styled.div`
   border-radius: 8px;
   position: relative;
   max-width: 500px;
-  width: 100%;
+  width: 90%;
 `;
 
 const CloseButton = styled.button`
