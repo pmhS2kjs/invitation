@@ -6,9 +6,24 @@ function GlobalStyle() {
   return (
     <Global
       styles={css`
+        @font-face {
+          font-family: 'KimjungchulMyungjo';
+          src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-Regular.woff2')
+            format('woff2');
+          font-display: swap;
+          font-weight: normal;
+          font-style: normal;
+        }
+        @font-face {
+          font-family: 'S-CoreDream-3Light';
+          src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff')
+            format('woff');
+          font-weight: normal;
+          font-style: normal;
+        }
         * {
-          /* font-family: 'Pretendard', Arial, Helvetica, sans-serif,
-            'Apple SD Gothic Neo', -apple-system, 'Segoe UI', 'Oxygen'; */
+          font-family: 'S-CoreDream-3Light', Arial, Helvetica, sans-serif,
+            'Apple SD Gothic Neo', -apple-system, 'Segoe UI', 'Oxygen';
           -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
         }
         html,
@@ -122,7 +137,7 @@ function GlobalStyle() {
         }
         body {
           line-height: 1;
-          font-family: 'Pretendard', Arial, Helvetica, sans-serif,
+          font-family: 'S-CoreDream-3Light', Arial, Helvetica, sans-serif,
             'Apple SD Gothic Neo', -apple-system, 'Segoe UI', 'Oxygen';
           min-width: 320px;
           background-color: ${theme.color.gray0};

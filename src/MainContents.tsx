@@ -26,14 +26,14 @@ const MainContents = () => {
 export default MainContents;
 
 const StyledText = styled.p`
-  line-height: 2.5;
+  line-height: 3.5;
   margin-bottom: 32px;
 `;
 
 const StyledIntroText = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  padding: 32px 16px;
   border-top: 1px solid ${({ theme }) => theme.color.gray200};
   border-bottom: 1px solid ${({ theme }) => theme.color.gray200};
   justify-content: center;
@@ -42,6 +42,8 @@ const StyledIntroText = styled.div`
   margin: 0 auto;
   gap: 16px;
   p {
+    font-family: 'KimjungchulMyungjo', Arial, Helvetica, sans-serif,
+      'Apple SD Gothic Neo', -apple-system, 'Segoe UI', 'Oxygen';
     ${({ theme }) => css`
       color: ${theme.color.gray800};
       ${theme.typography.content1Bold}

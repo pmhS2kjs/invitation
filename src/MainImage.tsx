@@ -70,6 +70,11 @@ const StyledMainImg = styled.div`
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
+    font-family: 'KimjungchulMyungjo', Arial, Helvetica, sans-serif,
+      'Apple SD Gothic Neo', -apple-system, 'Segoe UI', 'Oxygen';
+    ${({ theme }) => css`
+      ${theme.typography.h1}
+    `}
   }
 `;
 
